@@ -1,6 +1,7 @@
 package DataStructures.Heaps;
 
 /**
+ * 堆的接口实现定义
  * Interface common to heap data structures.<br>
  * <p>Heaps are tree-like data structures that allow storing elements in a specific
  * way. Each node corresponds to an element and has one parent node (except for the root) and
@@ -16,6 +17,7 @@ package DataStructures.Heaps;
 public interface Heap {
 
     /**
+     * 获取堆的顶部元素
      * @return the top element in the heap, the one with lowest key for min-heap or with
      * the highest key for max-heap
      * @throws EmptyHeapException if heap is empty
@@ -23,6 +25,7 @@ public interface Heap {
     HeapElement getElement() throws EmptyHeapException;
 
     /**
+     * 向堆中插入一个元素
      * Inserts an element in the heap. Adds it to then end and toggle it until it finds its
      * right position.
      *
