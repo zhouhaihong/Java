@@ -7,6 +7,9 @@ import java.util.List;
 import static Sorts.SortUtils.*;
 
 /**
+ * 排序步骤如下：
+ *  1.先构建堆
+ *  2.再进行排序
  * Heap Sort Algorithm
  * Implements MinHeap
  *

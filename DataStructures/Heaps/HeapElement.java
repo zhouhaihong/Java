@@ -4,6 +4,9 @@ import java.lang.Double;
 import java.lang.Object;
 
 /**
+ * heap元素包含两个属性：key用于构建堆所需的值（int或者double类型）；additionalInfo表示堆中节点的具体信息（如果本身用于
+ *  构建堆的数据是数值类型，则 additionalInfo可以为空）。
+ *
  * Class for heap elements.<br>
  * <p>A heap element contains two attributes: a key which will be used to build the tree (int
  * or double, either primitive type or object) and any kind of IMMUTABLE object the user sees fit
