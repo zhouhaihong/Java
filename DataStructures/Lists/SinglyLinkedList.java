@@ -249,7 +249,7 @@ public class SinglyLinkedList {
         myList.clear();
         assert myList.isEmpty();
 
-        /* Test MergeTwoSortedLinkedList */
+        /* QueenssTest MergeTwoSortedLinkedList */
         SinglyLinkedList listA = new SinglyLinkedList();
         SinglyLinkedList listB = new SinglyLinkedList();
 

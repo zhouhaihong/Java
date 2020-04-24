@@ -20,9 +20,9 @@ class DecimalToHexaDecimal {
 		return hexBuilder.toString().toLowerCase();
 	}
 
-	// Test above function.
+	// QueenssTest above function.
 	public static void main(String[] args) {
-		System.out.println("Test...");
+		System.out.println("QueenssTest...");
 		int dec = 305445566;
 		String libraryDecToHex = Integer.toHexString(dec);
 		String decToHex = decToHex(dec);
