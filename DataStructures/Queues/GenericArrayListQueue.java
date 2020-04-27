@@ -1,5 +1,4 @@
-package DataStructures.Queues;
-
+package Queues;
 import java.util.ArrayList;
 
 /**

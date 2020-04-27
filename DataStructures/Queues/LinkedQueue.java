@@ -1,4 +1,4 @@
-package DataStructures;
+package Queues;
 
 import java.util.NoSuchElementException;
 
