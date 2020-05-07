@@ -1,4 +1,4 @@
-package DataStructures.HashMap.Hashing;
+package HashMap.Hashing;
 
 class LinkedList {
 

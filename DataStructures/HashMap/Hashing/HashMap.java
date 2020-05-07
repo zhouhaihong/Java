@@ -1,5 +1,4 @@
-package DataStructures.HashMap.Hashing;
-
+package HashMap.Hashing;
 
 class HashMap {
     private int hsize;
@@ -16,8 +15,9 @@ class HashMap {
 
     public int hashing(int key) {
         int hash = key % hsize;
-        if (hash < 0)
+        if (hash < 0) {
             hash += hsize;
+        }
         return hash;
     }
 
