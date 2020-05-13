@@ -12,7 +12,9 @@ public class BogoSort implements SortAlgorithm {
 
     private static <T extends Comparable<T>> boolean isSorted(T[] array) {
         for (int i = 0; i < array.length - 1; i++) {
-            if (SortUtils.less(array[i + 1], array[i])) return false;
+            if (SortUtils.less(array[i + 1], array[i])) {
+                return false;
+            }
         }
         return true;
     }
