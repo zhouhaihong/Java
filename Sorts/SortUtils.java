@@ -60,6 +60,10 @@ final class SortUtils {
         System.out.println(Arrays.toString(toPrint));
     }
 
+    static void print(int[] toPrint) {
+        System.out.println(Arrays.toString(toPrint));
+    }
+
 
     /**
      * Swaps all position from {@param left} to @{@param right} for {@param array}
