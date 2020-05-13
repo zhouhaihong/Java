@@ -1,7 +1,3 @@
-package Sorts;
-
-import static Sorts.SortUtils.less;
-import static Sorts.SortUtils.print;
 
 /**
  * @author Podshivalov Nikita (https://github.com/nikitap492)
@@ -19,16 +15,18 @@ class CycleSort implements SortAlgorithm {
 
             // Find position where we put the item.
             int pos = j;
-            for (int i = j + 1; i < n; i++)
-                if (less(arr[i], item)) pos++;
-
+            for (int i = j + 1; i < n; i++) {
+                if (SortUtils.less(arr[i], item)) pos++;
+            }
             // If item is already in correct position
-            if (pos == j) continue;
+            if (pos == j) {
+                continue;
+            }
 
             // ignore all duplicate elements
-            while (item.compareTo(arr[pos]) == 0)
+            while (item.compareTo(arr[pos]) == 0) {
                 pos += 1;
-
+            }
             // put the item to it's right position
             if (pos != j) {
                 item = replace(arr, pos, item);
@@ -39,16 +37,16 @@ class CycleSort implements SortAlgorithm {
                 pos = j;
 
                 // Find position where we put the element
-                for (int i = j + 1; i < n; i++)
-                    if (less(arr[i], item)) {
+                for (int i = j + 1; i < n; i++) {
+                    if (SortUtils.less(arr[i], item)) {
                         pos += 1;
                     }
 
-
+                }
                 // ignore all duplicate elements
-                while (item.compareTo(arr[pos]) == 0)
+                while (item.compareTo(arr[pos]) == 0) {
                     pos += 1;
-
+                }
                 // put the item to it's right position
                 if (item != arr[pos]) {
                     item = replace(arr, pos, item);
@@ -73,7 +71,7 @@ class CycleSort implements SortAlgorithm {
         cycleSort.sort(arr);
 
         System.out.println("After sort : ");
-        print(arr);
+        SortUtils.print(arr);
     }
 
 }

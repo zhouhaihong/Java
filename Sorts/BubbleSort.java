@@ -1,6 +1,3 @@
-package Sorts;
-
-import static Sorts.SortUtils.*;
 
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)
@@ -21,8 +18,8 @@ class BubbleSort implements SortAlgorithm {
         for (int i = 0, size = array.length; i < size - 1; ++i) {
             boolean swapped = false;
             for (int j = 0; j < size - 1 - i; ++j) {
-            	if (less(array[j], array[j + 1])) {
-            		swap(array, j, j + 1);
+            	if (SortUtils.less(array[j], array[j + 1])) {
+                    SortUtils.swap(array, j, j + 1);
             		swapped = true;
                 }
             }
@@ -42,12 +39,12 @@ class BubbleSort implements SortAlgorithm {
         bubbleSort.sort(integers);
 
         // Output => 231, 78, 54, 23, 12, 9, 6, 4, 1
-        print(integers);
+        SortUtils.print(integers);
 
         // String Input
         String[] strings = {"c", "a", "e", "b", "d"};
         //Output => e, d, c, b, a
-        print(bubbleSort.sort(strings));
+        SortUtils.print(bubbleSort.sort(strings));
 
     }
 }

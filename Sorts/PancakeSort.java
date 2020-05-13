@@ -1,6 +1,3 @@
-package Sorts;
-
-import static Sorts.SortUtils.*;
 
 /**
  * Implementation of gnome sort
@@ -18,12 +15,12 @@ public class PancakeSort implements SortAlgorithm {
             T max = array[0];
             int index = 0;
             for (int j = 0; j < size - i; j++) {
-                if (less(max, array[j])) {
+                if (SortUtils.less(max, array[j])) {
                     max = array[j];
                     index = j;
                 }
             }
-            flip(array, index, array.length - 1 - i);
+            SortUtils.flip(array, index, array.length - 1 - i);
         }
         return array;
     }
@@ -36,6 +33,12 @@ public class PancakeSort implements SortAlgorithm {
         System.out.println("After sorting:");
         pancakeSort.sort(arr);
         print(arr);
+    }
+
+    static void print(Integer[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 
 

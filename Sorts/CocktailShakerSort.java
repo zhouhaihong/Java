@@ -1,4 +1,3 @@
-package Sorts;
 
 /**
  * @author Mateus Bizzo (https://github.com/MattBizzo)

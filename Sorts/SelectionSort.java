@@ -1,4 +1,3 @@
-package Sorts;
 
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)

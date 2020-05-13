@@ -1,6 +1,3 @@
-package Sorts;
-
-import static Sorts.SortUtils.*;
 
 /**
  * Implementation of gnome sort
@@ -15,9 +12,11 @@ public class GnomeSort implements SortAlgorithm {
         int i = 1;
         int j = 2;
         while (i < arr.length) {
-            if (less(arr[i - 1], arr[i])) i = j++;
+            if (SortUtils.less(arr[i - 1], arr[i])){
+                i = j++;
+            }
             else {
-                swap(arr, i - 1, i);
+                SortUtils.swap(arr, i - 1, i);
                 if (--i == 0) {
                     i = j++;
                 }
@@ -36,8 +35,8 @@ public class GnomeSort implements SortAlgorithm {
         gnomeSort.sort(strings);
 
         System.out.println("After sort : ");
-        print(integers);
-        print(strings);
+        SortUtils.print(integers);
+        SortUtils.print(strings);
 
 
     }

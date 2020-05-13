@@ -1,7 +1,3 @@
-package Sorts;
-
-import static Sorts.SortUtils.less;
-import static Sorts.SortUtils.print;
 
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)
@@ -25,7 +21,7 @@ class InsertionSort implements SortAlgorithm {
             T key = array[j];
             int i = j - 1;
 
-            while (i >= 0 && less(key, array[i])) {
+            while (i >= 0 && SortUtils.less(key, array[i])) {
                 array[i + 1] = array[i];
                 i--;
             }
@@ -45,7 +41,7 @@ class InsertionSort implements SortAlgorithm {
         sort.sort(integers);
 
         // Output => 1 4 6 9 12 23 54 78 231
-        print(integers);
+        SortUtils.print(integers);
 
         // String Input
         String[] strings = {"c", "a", "e", "b", "d"};
@@ -53,6 +49,6 @@ class InsertionSort implements SortAlgorithm {
         sort.sort(strings);
 
         //Output => a	b	c	d	e
-        print(strings);
+        SortUtils.print(strings);
     }
 }

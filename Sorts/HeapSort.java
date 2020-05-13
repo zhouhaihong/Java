@@ -1,10 +1,6 @@
-package Sorts;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static Sorts.SortUtils.*;
 
 /**
  * 排序步骤如下：
@@ -15,7 +11,7 @@ import static Sorts.SortUtils.*;
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  */
-public class HeapSort implements Sorts.SortAlgorithm {
+public class HeapSort implements SortAlgorithm {
 
 
     private static class Heap<T extends Comparable<T>> {
@@ -46,17 +42,17 @@ public class HeapSort implements Sorts.SortAlgorithm {
             if (rightIndex <= lastChild) { // if has right and left children
                 T left = heap[leftIndex];
                 T right = heap[rightIndex];
-                if (less(left, right) && less(left, root)) {
-                    swap(heap, leftIndex, rootIndex);
+                if (SortUtils.less(left, right) && SortUtils.less(left, root)) {
+                    SortUtils.swap(heap, leftIndex, rootIndex);
                     heapSubtree(leftIndex, lastChild);
-                } else if (less(right, root)) {
-                    swap(heap, rightIndex, rootIndex);
+                } else if (SortUtils.less(right, root)) {
+                    SortUtils.swap(heap, rightIndex, rootIndex);
                     heapSubtree(rightIndex, lastChild);
                 }
             } else if (leftIndex <= lastChild) { // if no right child, but has left child
                 T left = heap[leftIndex];
-                if (less(left, root)) {
-                    swap(heap, leftIndex, rootIndex);
+                if (SortUtils.less(left, root)) {
+                    SortUtils.swap(heap, leftIndex, rootIndex);
                     heapSubtree(leftIndex, lastChild);
                 }
             }
@@ -88,7 +84,7 @@ public class HeapSort implements Sorts.SortAlgorithm {
          * @return root of heap
          */
         private T getRoot(int size) {
-            swap(heap, 0, size);
+            SortUtils.swap(heap, 0, size);
             heapSubtree(0, size - 1);
             return heap[size]; // return old root
         }
@@ -126,7 +122,7 @@ public class HeapSort implements Sorts.SortAlgorithm {
     public static void main(String[] args) {
         Integer[] heap = {4, 23, 6, 78, 1, 54, 231, 9, 12};
         HeapSort heapSort = new HeapSort();
-        print(heapSort.sort(heap));
+        SortUtils.print(heapSort.sort(heap));
     }
 
 }

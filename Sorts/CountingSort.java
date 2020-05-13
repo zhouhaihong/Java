@@ -1,12 +1,9 @@
-package Sorts;
-
 import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
-import static Sorts.SortUtils.print;
 
 /**
  * @author Youssef Ali (https://github.com/youssefAli11997)
@@ -70,13 +67,13 @@ class CountingSort implements SortAlgorithm {
         CountingSort countingSort = new CountingSort();
 
         System.out.println("Before Sorting:");
-        print(unsortedInts);
+        SortUtils.print(unsortedInts);
 
         // Output => 1 1 4 6 9 9 12 23 23 54 78 231
         System.out.println("After Sorting:");
-        print(countingSort.sort(unsortedInts));
+        SortUtils.print(countingSort.sort(unsortedInts));
         System.out.println("After Sorting By Streams:");
-        print(streamSort(unsortedInts));
+        SortUtils.print(streamSort(unsortedInts));
 
         System.out.println("\n------------------------------\n");
 
@@ -84,14 +81,14 @@ class CountingSort implements SortAlgorithm {
         List<String> unsortedStrings = Stream.of("c", "a", "e", "b", "d", "a", "f", "g", "c").collect(toList());
 
         System.out.println("Before Sorting:");
-        print(unsortedStrings);
+        SortUtils.print(unsortedStrings);
 
         //Output => a a b c c d e f g
         System.out.println("After Sorting:");
-        print(countingSort.sort(unsortedStrings));
+        SortUtils.print(countingSort.sort(unsortedStrings));
 
         System.out.println("After Sorting By Streams:");
-        print(streamSort(unsortedStrings));
+        SortUtils.print(streamSort(unsortedStrings));
 
     }
 }
